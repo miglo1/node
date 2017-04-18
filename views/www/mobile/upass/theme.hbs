@@ -1,0 +1,77 @@
+{{#section 'css-file'}}
+    <link rel="stylesheet" href="/public/css/mobile/upass/theme.css">
+{{/section}}
+<!-- html部分 -->
+<div class="wrapper">
+    <!--头图-->
+    <img src="{{ data.head_image }}" alt="">
+    <!--导航-->
+    <ul class="clearfix" id="navbar">
+        {{#each data.content}}
+            <li>
+                <a href="#tab{{ @index }}"><img class="navi" src="{{ icon_image }}" alt=""></a>
+            </li>
+        {{/each}}
+    </ul>
+    <!--标题和商品标签-->
+    {{#each data.content}}
+        <section>
+            <label id="tab{{ @index }}" class="nav_aim"></label>
+            <img class="title" src="{{ title_image }}" alt="">
+            <div class="goods_list">
+                <ul>
+                    {{#each goods}}
+                        <li>
+                            <a  href="{{ redirect }}">
+                                <img class="lazyload" src="http://ujipinwww.ufile.ucloud.com.cn/goods_list_default.png" data-original="{{ thumbnail }}" alt="">
+                            </a>
+                            <div class="goods_list_iofo">
+                                <div class="selling_point">
+                                    {{ brand }}
+                                </div>
+                                <div class="g-name">{{ name }}</div>
+                                <div class="g-price">
+                                    <p class="g-market">专享价￥<b>{{ vip_price }}</b></p>
+                                    <p class="u-price">优选价￥<span>{{ goods_price }}</span></p>
+                                </div>
+                            </div>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+    {{/each}}
+    <div class="footer">
+        <img src="{{ data.foot_image}}" alt="">
+    </div>
+</div>
+{{#section 'js-file'}}
+    <script type="text/javascript" src="/public/js/lib/ujipin.js"></script>
+    <script type="text/javascript" src="/public/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/lib/lazyload.js"></script>
+    <script type="text/javascript" src="/public/js/lib/jquery.nav.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
+    <script src="/public/js/lib/mobile/weixinShare.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //导航出现和隐藏
+        $(window).scroll(function(){
+            var scrollTop = $(this).scrollTop();
+            if(scrollTop > 320)
+            {
+                $("#navbar").addClass('show_nav');
+            }else{
+                $("#navbar").removeClass('show_nav');
+            }
+        });
+        //导航跳转
+        $(document).ready(function() {
+            $('#navbar').onePageNav();
+        });
+        //懒加载
+        $('.lazyload').lazyload();
+        //分享代码
+        var path = window.location.host+window.location.pathname;
+        shareAjax(11,path);
+
+    </script>
+{{/section}}

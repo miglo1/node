@@ -1,0 +1,1027 @@
+.header_container{
+	min-width: 1150px;
+	width: 100%;
+	height: 70px;
+	border-bottom: 1px solid #ECECEC;
+	position: relative;
+	z-index: 100;
+	background: #ffffff;
+}
+.header_main{
+	width: 1150px;
+	margin: 0 auto;
+}
+.web_logo{
+	width: 156px;
+	height: 42px;
+	float: left;
+	margin-top: 16px;
+}
+.web_logo a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.web_logo img{
+	width: 100%;
+	height: 100%;
+}
+.nav_bar_container{
+	height: 50px;
+	position: relative;
+	width: 100%;
+	background: white;
+/*	position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 10;*/
+}
+.nav_bar{
+	width: 1150px;
+	margin: 0 auto;
+}
+.nav_bar>h2{
+	position: absolute;
+	left: 0px;
+	bottom: -3px;
+	width: 100%;
+	height: 3px;
+	background:url(../img/nav_bg.png) repeat-x left bottom;
+	z-index: 13;
+}
+.nav_bar ul{
+	line-height: 50px;
+	display: inline-block;
+}
+.nav_bar ul>li{
+	float: left;
+	margin-right: 44px;
+	text-align: center;
+	color: #4A4A4A;
+	font-size: 14px;
+	display: inline;
+	height: 50px;
+	cursor: pointer;
+	position: relative;
+}
+.nav_bar ul>li>p{
+	background: #e74c3c;
+    display: block;
+    width: 70px;
+    height: 1px;
+    overflow: hidden;
+    font-size: 1px;
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    margin-left: -35px;
+}
+.nav_bar ul>li>a{
+	color: #4A4A4A;
+}
+.nav_bar ul>li:hover>a{
+	color: #e74c3c;
+}
+/*.nav_bar ul>li ol{
+	position: absolute;
+	display: none;
+	top: 44px;
+	width: 1150px;
+	left: 50%;
+	margin-left: -49px;
+	background: white;
+	border-top: 2px solid #e74c3c;
+	text-align: center;
+	z-index: 100000000;
+  	-webkit-box-shadow:0 1px 20px #CCC;
+ 	-moz-box-shadow:0 1px 20px #CCC;
+  	box-shadow:0 1px 20px #CCC;
+}
+.nav_bar ul>li ol li{
+	height: 40px;
+	line-height: 40px;
+}
+.nav_bar ul>li ol li:hover{
+	background: #F8F8F8;
+}
+.nav_bar ul>li ol li:hover a{
+	color: #e74c3c;
+}
+.nav_bar ul>li ol a{
+	color: #828282;
+	font-size: 14px;
+}*/
+.nav_bar_cont{
+	width: 100%;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 100%;
+	height: 50px;
+	display: none;
+	background: #F8F8F8;
+  	// background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/navigation.png) repeat-x left top;
+  	z-index: 12;
+}
+.nav_bar_cont ol{
+	width: 1150px;
+	margin: 0 auto;
+}
+.nav_bar_cont ol li{
+	display: inline-block;
+	line-height: 50px;
+	margin-right: 42px;
+}
+.nav_bar_cont ol li a{
+	color: #4A4A4A;
+	font-size: 13px;
+}
+
+.nav_bar_cont ol li:hover a{
+	color: #e74c3c;
+}
+.nav_bar ul>li ol{
+	position: absolute;
+	top: 114px;
+	width: 1150px;
+	height: 55px;
+	left: 0px;
+	display: none;
+	background: #F8F8F8;
+	text-align: center;
+  	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/navigation.png) repeat-x left top;
+}
+.nav_bar ul>li.on>a{
+	color: #e74c3c;
+}
+.nav_bar ul>li ol li{
+	display: inline-block;
+	line-height: 50px;
+	margin-left: 17px;
+	margin-right: 17px;
+}
+.nav_bar ul>li ol a{
+	color: #828282;
+	font-size: 14px;
+}
+.nav_bar ul>li ol li:hover a{
+	color: #e74c3c;
+}
+.functional_area{
+	float: right;
+	margin-top: 18px;
+}
+.user_functions{
+	margin-bottom: 20px;
+	margin-top: 8px;
+	float: right;
+}
+.user_functions ul{
+	// overflow: hidden;
+}
+.user_functions li a{
+	display: block;
+}
+.user_functions>ul>li{
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 20px;
+	height: 17px;
+	float: left;
+	position: relative;
+}
+.user_functions li.download_app{
+	padding-right: 16px;
+}
+.user_functions li.download_app a{
+	width: 14px;
+	height: 20px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -38px  -84px;
+}
+.user_functions li.download_app div{
+	position: absolute;
+	width: 130px;
+	height: 130px;
+  	-webkit-box-shadow:0 0 2px #CCC;
+ 	-moz-box-shadow:0 0 2px #CCC;
+  	box-shadow:0 0 2px #CCC;
+  	-ms-box-shadow:0 0 2px #CCC;
+  	left:-40px;
+  	top: 40px;
+  	display: none;
+  	z-index: 20;
+}
+.user_functions li.download_app div span{
+	width: 16px;
+	height: 11px;
+	position: absolute;
+	top: -11px;
+	left: 50%;
+	margin-left: -8px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -26px  -162px;
+}
+.user_functions li.user_center{
+	position: relative;
+}
+.user_functions li.user_center>div{
+	position: absolute;
+	height: auto;
+	width: 130px;
+	background: white;
+	left: 50%;
+	margin-left: -65px;
+	top: 40px;
+	display: none;
+  	-webkit-box-shadow:0 0 2px #CCC;
+ 	-moz-box-shadow:0 0 2px #CCC;
+  	box-shadow:0 0 2px #CCC;
+  	-ms-box-shadow:0 0 2px #CCC;
+  	z-index: 20;
+}
+.user_functions li.user_center>div ul{
+	width: 100%;
+	text-align: center;
+}
+.user_functions li.user_center>div ul li{
+	height: 30px;
+	line-height: 30px;
+}
+.user_functions li.user_center>div ul li h3{
+	 white-space:nowrap;
+	 text-overflow:ellipsis;
+	 -o-text-overflow:ellipsis;
+	 overflow:hidden;
+	 width: 106px;
+	 margin: 0 auto;
+}
+.user_functions li.user_center>div ul li a{
+	font-size: 14px;
+	color: #4A4A4A;
+}
+.user_functions li.user_center>div ul li a:hover{
+	color: #e74c3c;
+}
+.user_functions li.user_center div>span{
+	width: 14px;
+	height: 11px;
+	position: absolute;
+	top: -11px;
+	right: 57px;
+	margin-left: -8px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -28px  -162px;
+}
+.user_functions li.user_center>a{
+	width: 21px;
+	height: 18px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -17px  -84px;
+}
+.user_functions li.user_center>a.overlogin{
+	width: 18px;
+	height: 20px;
+	background:url(http://ujipinwww.ufile.ucloud.com.cn/static/img/overlogin.png) no-repeat;
+	background-size: 100% 100%;
+}
+.user_functions li.shopping_bag{
+	position: relative;
+}
+.user_functions li.shopping_bag>div{
+	display: none;
+	background: white;
+}
+.user_functions li.shopping_bag>a>b{
+	position: absolute;
+	min-width: 8px;
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 11px;
+	border-radius: 6px;
+	border:1px solid white;
+	background: #e74c3c;
+	text-align: center;
+	line-height: 13px;
+	color: white;
+	top: 5px;
+	left: 28px;
+	font-weight: normal;
+	font-family: arial hebrew !important;
+}
+.user_functions li.shopping_bag>div div.empty{
+	width: 145px;
+	height: 176px;
+	margin: 0 auto;
+	margin-top: 56px;
+	margin-bottom: 50px;
+}
+.user_functions li.shopping_bag>div div.empty p{
+	color: #828282;
+	font-size: 12px;
+}
+.user_functions li.shopping_bag div#shopping_bag_cont{
+	position: absolute;
+	width: 320px;
+	max-height: 576px;
+	background: white;
+	top: 40px;
+	display: none;
+	right: -20px;
+  	-webkit-box-shadow:0 0 10px #CCC;
+ 	-moz-box-shadow:0 0 10px #CCC;
+  	box-shadow:0 0 10px #CCC;
+  	-ms-box-shadow:0 0 10px #CCC;
+  	z-index: 20;
+}
+.user_functions li.shopping_bag>div>p{
+	height: 32px;
+	background: #F8F8F8;
+	line-height: 32px;
+	padding-left: 22px;
+}
+.user_functions li.shopping_bag>div>p a{
+	float: right;
+	width: 100px;
+	height: 32px;
+	background: #e74c3c;
+	text-align: center;
+	line-height: 32px;
+	font-size: 12px;
+	color: white;
+}
+.user_functions li.shopping_bag>div>p i{
+	color:#e74c3c;
+	font-size: 13px;
+	font-style: normal;
+}
+.user_functions li.shopping_bag div>span{
+	width: 14px;
+	height: 11px;
+	position: absolute;
+	top: -11px;
+	right: 44px;
+	margin-left: -8px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -28px  -162px;
+}
+.user_functions li.shopping_bag div>h3{
+	font-weight: normal;
+	font-size: 14px;
+	color: #4A4A4A;
+	margin-top: 23px;
+	height: 14px;
+	padding-left: 22px;
+}
+.user_functions li.shopping_bag div ul{
+	padding-right: 22px;
+	padding-left: 22px;
+	max-height: 507px;
+	overflow-y: scroll;
+}
+.user_functions li.shopping_bag div ul li{
+	border-bottom:1px solid #ECECEC;
+	height: 100px;
+}
+.user_functions li.shopping_bag div ul li dl{
+	padding-top: 21px;
+	overflow:hidden;
+}
+.user_functions li.shopping_bag div ul li dl dt,.user_functions li.shopping_bag div ul li dl dd{
+	float: left;
+}
+.user_functions .bag_calculate{
+	margin-top: 12px;
+	height: 16px;
+}
+.user_functions .bag_calculate span,.user_functions .bag_calculate input{
+	float: left;
+	cursor: pointer;
+}
+.user_functions .bag_calculate span.no{
+	background: #ECECEC;
+}
+.user_functions .bag_calculate input[type=text]{
+	width: 25px;
+	height: 14px;
+	border:none;
+	border-top: 1px solid #F8F8F8;
+	border-bottom: 1px solid #F8F8F8;
+	outline: none;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+}
+.user_functions .bag_calculate em{
+	color: #e74c3c;
+	line-height: 17px;
+}
+.user_functions .bag_calculate  b{
+	font-weight: normal;
+}
+.user_functions .bag_calculate span{
+	height: 14px;
+	width: 14px;
+	border:1px solid #F8F8F8;
+	text-align: center;
+	color: #828282;
+	line-height: 14px;
+}
+.user_functions .bag_calculate em{
+	float: right;
+}
+.user_functions li.shopping_bag div ul li dl dt{
+	width: 60px;
+	height: 60px;
+	margin-right: 10px;
+}
+.user_functions  li.shopping_bag div ul li dl dd{
+	width: 191px;
+}
+.user_functions .b_product_message h4{
+	font-weight: normal;
+	color: #4A4A4A;
+	font-size: 12px;
+	width: 160px;
+	float: left;
+	line-height: 13px;
+	margin-top: 4px;
+}
+.user_functions .b_product_message span.del{
+	float: right;
+	width: 12px;
+	height: 12px;
+	margin-top: 5px;
+}
+.user_functions .b_product_message span.del img{
+	width: 100%;
+	height: 100%;
+}
+.user_functions li.shopping_bag a{
+	margin: 0 auto;
+	width: 17px;
+	height: 19px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: 0px  -84px;
+}
+.user_functions li.none{
+	border-right: none;
+}
+.search_box{
+	float: right;
+	position: relative;
+	height: 32px;
+	background: #F8F8F8;
+	border-radius: 16px;
+	cursor: pointer;
+	display: inline;
+	margin-right: 10px;
+	border:1px solid #F8F8F8;
+}
+.search_box ul{
+	position: absolute;
+	left: 12px;
+	top: 34px;
+	width: 272px;
+	height: auto;
+	background: white;
+  	-webkit-box-shadow:0 0 2px #CCC;
+ 	-moz-box-shadow:0 0 2px #CCC;
+  	box-shadow:0 0 2px #CCC;
+  	-ms-box-shadow:0 0 2px #CCC;
+	display: none;
+	max-height: 210px;
+	overflow-y: scroll;
+	z-index: 101;
+}
+.search_box ul li{
+	height: 30px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 30px;
+	text-indent: 15px;
+}
+.search_box ul li.on{
+	background: #F8F8F8;
+}
+.search_box ul li a{
+	color: #949494;
+}
+.search_box input[type=text]{
+	width: 170px;
+	line-height: 34px;
+	border: 0px;
+	float: left;
+	font-size: 14px;
+	color: #4A4A4A;
+	height: 34px;
+	background: none;
+	text-indent: 6px;
+	outline: none;
+	text-indent: 16px;
+}
+.search_box p{
+	height: 20px;
+	width: 200px;
+	height: 34px;
+	display: inline-block;
+	position: relative;
+}
+.search_box p em{
+	position: absolute;
+	right: 0px;
+	top: 19px;
+	height: 1px;
+	width: 0px;
+	overflow: hidden;
+	background: #CBCAC8;
+}
+.search_box span{
+	line-height: 34px;
+	float: right;
+	width: 30px;
+	height: 34px;
+}
+.search_box span img{
+	width: 19px;
+	height: 18px;
+	display: block;
+	margin-top: 7px;
+}
+.search_box p.focus{
+	border-bottom: 1px solid #CBCAC8;
+}
+
+
+/*页尾开始*/
+.footer_container{
+	min-width: 1150px;
+	width: 100%;
+	height: 140px;
+	margin-top: 140px;
+	background: #F8F8F8;
+}
+.footer_main{
+	width: 1150px;
+	margin:0 auto;
+}
+.footer_help{
+	height: 25px;
+	padding-top: 26px;
+	overflow: hidden;
+	margin-bottom: 32px;
+}
+.footer_help li{
+	float: left;
+	margin-right: 66px;
+}
+.footer_help li a{
+	display: block;
+	padding-left: 32px;
+	height: 25px;
+	line-height: 25px;
+	color: #4A4A4A;
+	font-size: 12px;
+}
+.footer_help li .about_ujp{
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: 12px  -133px;
+}
+.footer_help li .shopping_guide{
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -208px  -132px;
+}
+.footer_help li .notification{
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/notification.png) no-repeat;
+	background-size: 15px 20px;
+	background-position: 10px 2px;
+}
+.footer_help li .common_problem{
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -108px  -132px;
+}
+.website_information{
+	margin-top: 32px;
+}
+.website_information p{
+	float: left;
+	height: 20px;
+	font-size: 12px;
+	margin-top: 2px;
+	overflow: hidden;
+}
+.website_information span{
+	padding-right: 22px;
+	padding-left: 22px;
+	border-right: 1px solid #4A4A4A;
+}
+.website_information span.last{
+	border-right: none;
+}
+.website_information span.first{
+	padding-left: 10px;
+}
+.website_information dl{
+	float: right;
+	height: 19px;
+	margin-right: 10px;
+	display: inline;
+}
+.website_information dl dt,.website_information dl dd{
+	float: left;
+	display: inline;
+}
+.website_information dl dt{
+	line-height: 19px;
+	font-size: 12px;
+}
+.website_information dl dd{
+	margin-left: 20px;
+}
+.website_information dl dd.weichat{
+	width: 23px;
+	height: 19px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	position: relative;
+	background-position: -90px  -105px;
+}
+.website_information dl dd.weichat div{
+	position: absolute;
+	width: 130px;
+	height: 130px;
+  	-webkit-box-shadow:0 0 10px #CCC;
+ 	-moz-box-shadow:0 0 10px #CCC;
+  	box-shadow:0 0 10px #CCC;
+  	left:-56px;
+  	top: -140px;
+  	display: none;
+}
+.website_information dl dd.weichat div span{
+	position: absolute;
+	bottom: -10px;
+	overflow:hidden;
+	left: 50%;
+	margin-left: -7px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: -44px -163px;
+	width: 14px;
+	padding-top: 0px;
+	border:none;
+	height: 10px;
+	padding: 0px;
+}
+/*订单状态头*/
+.orders_status{
+	width: 1150px;
+	margin: 0 auto;
+	margin-top: 62px;
+	color: #4A4A4A;
+	margin-bottom: 50px;
+}
+.orders_status p{
+	font-size: 20px;
+	float: left;
+}
+.status_main{
+	float: right;
+}
+.cancle_status_main{
+	width: 390px;
+}
+.status_main p{
+	width: 96px;
+	height: 0px;
+	overflow-y: hidden;
+	border-top: 2px solid #BEBDBB;
+}
+.cancle_status_main p{
+	width: 92px;
+}
+.status_main p.line_l{
+	margin-left: 25px;
+}
+.cancle_status_main p.line_l{
+
+}
+.status_main p.d{
+	border-top-style: dashed;
+}
+.status_main p.line_r{
+	margin-right:38px;
+	border-top: 2px  dashed #BEBDBB;
+}
+.cancle_status_main p.line_r{
+	margin-right: 4px;
+	margin-left: 17px;
+}
+.status_main p.on{
+	border-top:2px solid #e74c3c;
+}
+.status_main p.s{
+	border-top-style: solid;
+}
+.status_main ul{
+	padding-top: 16px;
+}
+.status_main ul li{
+	float: left;
+	position: relative;
+}
+.status_main ul li.on{
+	color: #e74c3c;
+}
+.status_main ul li.m{
+	margin-left: 62px;
+}
+.hdfk  ul li.m{
+	margin-left: 47px;
+}
+.hdfk  ul li.nl{
+	margin-left: 62px;
+}
+.status_main ul li.l{
+	margin-left: 52px;
+}
+.hdfk  ul li.l{
+	margin-left: 45px;
+}
+.cancle_status_main ul li.m{
+	margin-left: 62px;
+}
+.cancle_status_main ul li.l{
+	margin-left: 54px;
+}
+.status_main ul li em{
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	top: -24px;
+	left: 50%;
+	margin-left: -9px;
+	background-image: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/order_status_bad.png);
+	background-size: 100% 100%;
+}
+.status_main ul li em.on{
+	background-image: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/order_status_ok.png);
+	color: #e74c3c;
+}
+/*面包屑*/
+
+.bread{
+	width: 100%;
+	height: 50px;
+	background: #F8F8F8;
+	margin-bottom: 32px;
+}
+.bread_container{
+	width: 1150px;
+	margin: 0 auto;
+	line-height: 50px;
+	font-size: 14px;
+}
+.bread_container i{
+	color: black;
+}
+.bread_container span{
+	color: #4A4A4A;
+}
+.bread_container p{
+	display: inline-block;
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 28px;
+	background: #ECECEC;
+	line-height: 28px;
+	margin-top: 12px;
+}
+.bread_container p a{
+	margin-right: 6px;
+	font-size: 18px;
+	font-weight: 200;
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	color: #4A4A4A;
+}
+.bread_container p a img{
+	width: 100%;
+	height: 100%;
+}
+body{
+	position: relative;
+}
+/*遮罩层*/
+.mark{
+	background: #000000;
+	opacity: 0.3;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 100000;
+}
+.ui-dialog{
+	width: 400px;
+	position: absolute;
+	left: 50%;
+	margin-left:-200px;
+	top: 0px;
+	height: 225px;
+	background: white;
+	border-radius: 3px;
+	z-index: 1000001;
+}
+.ui-dialog h2{
+	font-weight: normal;
+	font-size: 22px;
+	color: #5C5C5C;
+	margin-top: 38px;
+	text-align: center;
+}
+.ui-dialog h3{
+	font-weight: normal;
+	font-size: 18px;
+	color: #4A4A4A;
+	width: 289px;
+	line-height: 24px;
+	margin: 0 auto;
+	margin-top: 25px;
+	text-align: center;
+}
+.ui-dialog p{
+	text-align: center;
+	margin-top: 34px;
+}
+.ui-dialog b{
+	width: 16px;
+	height: 16px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/del_u.png) no-repeat;
+	background-size: 16px 16px;
+	position: absolute;
+	right: 15px;
+	cursor: pointer;
+	top: 15px;
+}
+.ui-dialog span{
+	display: inline-block;
+	width: 138px;
+	height: 38px;
+	background: #e74c3c;
+	border:1px solid #e74c3c;
+	line-height: 38px;
+	text-align: center;
+	font-size: 14px;
+	color: white;
+	border-radius: 3px;
+	margin-right: 10px;
+	cursor: pointer;
+}
+.ui-dialog span.gray{
+	background: white;
+	color: #828282;
+	border:1px solid #828282
+}
+.dialog{
+	max-width: 250px;
+	padding-top: 22px;
+	padding-bottom: 22px;
+	padding-left: 46px;
+	padding-right: 46px;
+	background: white;
+	position: absolute;
+	left: 50%;
+	border-radius: 3px;
+	margin-left:-100px;
+	z-index: 1000004;
+	top: 0px;
+}
+.dialog p{
+	text-align: center;
+	width: 200px;
+	line-height: 30px;
+	font-size: 18px;
+	color: #4A4A4A;
+}
+.loading{
+	width: 100%;
+	text-align: center;
+	height: 50px;
+	clear: both;
+}
+.loading img{
+	width: 50px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+.backT{
+	width: 65px;
+	height: 66px;
+	border-radius: 3px;
+	background: #F8F8F8;
+	position: fixed;
+	bottom: 160px;
+	right: 0px;
+	display: none;
+	right: 0px;
+	font-size: 14px;
+	cursor: pointer;
+	color: #4A4A4A;
+	z-index: 2;
+	// background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+}
+.backT img{
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin-left: 10px;
+	margin-top: 12px;
+	// opacity: 0.3;
+}
+.backT p{
+	padding: 14px 0px;
+	line-height: 18px;
+	padding-left: 18px;
+	letter-spacing: 3px;
+	display: none;
+}
+
+
+.Contact_service{
+	width: 65px;
+	height: 66px;
+	border-radius: 3px;
+	background: #F8F8F8;
+	position: fixed;
+	bottom: 234px;
+	right: 0px;
+	display: none;
+	right: 0px;
+	font-size: 14px;
+	cursor: pointer;
+	color: #4A4A4A;
+	z-index: 2;
+}
+.Contact_service a{
+	display: block;
+}
+.Contact_service img{
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin-left: 10px;
+	margin-top: 12px;
+	// opacity: 0.3;
+}
+.Contact_service p{
+	padding: 14px 0px;
+	line-height: 18px;
+	padding-left: 18px;
+	letter-spacing: 3px;
+	display: none;
+}
+
+.scroll_shop{
+	float: right;
+	margin: 0 auto;
+	width: 17px;
+	height: 19px;
+	background: url(http://ujipinwww.ufile.ucloud.com.cn/static/img/icon_bg.png) no-repeat;
+	background-size: auto 200px;
+	background-position: 0px  -84px;
+	_display:inline;
+	margin-right: 43px;
+	margin-top: 15px;
+	display: none;
+	position: relative;
+}
+.scroll_shop>b{
+	position: absolute;
+	min-width: 8px;
+	padding-left: 2px;
+	padding-right: 2px;
+	height: 11px;
+	border-radius: 6px;
+	border:1px solid white;
+	background: #e74c3c;
+	text-align: center;
+	line-height: 13px;
+	color: white;
+	top: 5px;
+	left: 6px;
+	font-weight: normal;
+	font-family: arial hebrew !important;
+}

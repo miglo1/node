@@ -1,0 +1,148 @@
+{{#section 'css-file'}}
+    <link rel="stylesheet" type="text/css" href="/public/css/mobile/upass/index.css">
+{{/section}}
+
+<div class="wrapper" id="app">
+  <div class="top" v-if="upass_rank === 0 || user === ''">
+    <span href="#" id="upassGo" @click="upassGo"></span>
+    <img src="http://ujipinwww.ufile.ucloud.com.cn/upassBanner1222.png" alt="" class=>
+  </div>
+  <div class="user_info" v-else-if="upass_rank === 1">
+    <img src="http://ujipinwww.ufile.ucloud.com.cn/upassUserBg.png" alt="">
+      <dl>
+          <dt><img :src="user.avatar ? user.avatar : 'http://ujipinwww.ufile.ucloud.com.cn/upass/defaultAvatar.png'" alt=""></dt>
+          <dd><b class="noBg" v-html="user.nickname"></b></dd>
+          <dd class="tq"><span @click="btn1"  :class="cls">特权一览</span><span v-if="card" @click="btn2">U-PASS</span></dd>
+      </dl>
+  </div>
+  <div class="container">
+    <div class="upass_item" id="tq">
+      <h3>U-PASS独享优惠价格</h3>
+      <a v-for="item in privilege_list" :href="item.url"><img :src="item.image" alt=""></a>
+      <!-- <p v-text="privilege_list"></p> -->
+    </div>
+    <div class="upass_item" id="sh" v-if="poster_goods_list.length!==[].length">
+      <h3>U-PASS独享限量商品</h3>
+      <a v-for="item in poster_goods_list" :href="isApp ? 'ujipin://goods?id='+item.goods_id : 'http://m.ujipin.com/v4/goods/'+item.goods_id"><img :src="item.upass.vip_poster" alt=""></a>
+    </div>
+  </div>
+  <div class="goods_box">
+    <h3 class="tit">专属福利</h3>
+    <a v-for="item in service_list" :href="item.url"><img :src="item.image" alt=""></a>
+  </div>
+  <img src="http://ujipinwww.ufile.ucloud.com.cn/upassFootbar.png" alt="">
+</div>
+
+{{#section 'js-file'}}
+<script src="/public/js/lib/ujipin.js"></script>
+<script src="/public/js/lib/vue.js"></script>
+<script>
+var app = new Vue({
+el: '#app',
+data:{
+    poster_goods_list: [],
+    privilege_list: [],
+    service_list: [],
+    isApp: false,
+    upass_rank: '',
+    user: '',
+    cls: '',
+    versionNum: false,
+    card: false
+},
+computed:{
+  cls: function(){
+    if(this.isApp){
+      return 'r';
+    }
+  },
+  card:function(){
+    if(this.isApp && this.versionNum){
+        return true;
+    }
+  }
+},
+mounted:function(){
+  if(u.isApp() == "ios" || u.isApp() == "android"){
+      this.isApp = true;
+  }
+  this.setUser();
+  this.getData();
+},
+methods:{
+  getData:function(){
+    var _this=this;
+    u.ajax({
+        url: "/api/v5/upass/home",
+        aysnc: false,
+        beforeSend:function(){
+          $("body").append($('<div class="mark" id="mark"></div><p class="loading" id="loading">加载中...</p>'));
+        },
+        complete:function(){},
+    },function(data){
+      $("#mark").hide();
+      $("#loading").hide();
+        if(data.status_code==200){
+            _this.poster_goods_list= data.data.poster_goods_list;
+            _this.privilege_list= data.data.privilege_list;
+            _this.service_list= data.data.service_list;
+            // if(){}
+            if(data.data.user){
+               _this.upass_rank = data.data.user.vip_rank;
+               _this.user = data.data.user;
+            }
+            if(data.data.client_version > "5.2.0"){
+              _this.versionNum = true;
+            }
+            //懒加载
+             _this.$nextTick(function(){
+                $("h3").show();
+             })
+        }else{
+          alert(data.message);
+        }
+    });
+  },
+  upassGo: function(){
+    if(this.user){
+      location.href =u.getUrlString('access_token')? "/v4/upass/openPass?access_token="+u.getUrlString('access_token')+"&track=upass" : "/v4/upass/openPass?track=upass";
+    }else{
+      if(this.isApp){
+        location.href="ujipin://login";
+      }else{
+        location.href="/v4/login_cover?callback=/v4/upass/index";
+      }
+    }
+  },
+  btn1:function(){
+    location.href="/v4/upass/privilege";
+  },
+  btn2:function(){
+    location.href="ujipin://upasscard";
+  },
+  Url: function(id,type){
+      var isApp = this.isApp;
+      if(isApp){
+        if(type === 1){
+          return "ujipin://features?id="+id+"&type=10";
+        }else{
+          return "ujipin://goods?id="+id+"";
+        }
+      }else{
+        if(type === 1){
+          return "h5活动";
+        }else{
+          return "http://m.ujipin.com/v4/goods/"+id+"";
+        }
+      }
+  },
+  setUser:function(){
+    var access_token = u.getUrlString('access_token');
+    var sid =  access_token || u.getCookie("sid");
+    access_token && u.setCookie('sid',access_token);
+
+  }
+}
+})
+</script>
+{{/section}}

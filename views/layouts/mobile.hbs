@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta property="qc:admins" content="24517261765210166375" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/lib/mobile/reset.css">
+    {{{_sections.css-file}}}
+</head>
+<body>
+{{{body}}}
+</body>
+<script src="/public/js/lib/mobile/zepto.min.js" type="text/javascript"></script>
+<script src="/public/js/lib/weblog.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //自动计算设备宽度
+        var deviceWidth = document.documentElement.clientWidth;
+        if(deviceWidth > 640) deviceWidth = 640;
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+
+        //设置最小高度为客户端高度，防止内容不够时出现底白
+        $('.wrapper').css('min-height', $(window).height()).css('width','100%');
+    });
+</script>
+{{{_sections.js-file}}}

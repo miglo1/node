@@ -1,0 +1,15 @@
+{{#section 'css-file'}}
+    <link rel="stylesheet" href="/public/css/mobile/upass/openSuccess.css" type="text/css">
+{{/section}}
+<div class="wrapper">
+    <a id="he" href="http://m.ujipin.com/v4/upass/index">立享特权</a>
+</div>
+{{#section 'js-file'}}
+<script src="/public/js/lib/ujipin.js"></script>
+<script type="text/javascript">
+    if(u.getUrlString('access_token')){
+      var token=u.getUrlString('access_token');
+      $("#he").attr("href","http://m.ujipin.com/v4/upass/index?access_token="+token);
+    }
+</script>
+{{/section}}

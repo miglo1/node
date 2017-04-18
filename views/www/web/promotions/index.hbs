@@ -1,0 +1,82 @@
+{{#section 'css-file'}}
+    <!-- we want Google to ignore this page -->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/public/css/web/special/pc.css">
+{{/section}}
+<!-- html部分 -->
+<div class="main">
+
+</div>
+
+{{#section 'js-file'}}
+<script src="/public/js/lib/juicer-min.js" type="text/javascript"></script>
+<script src="/public/js/web/tpl.js" type="text/javascript"></script>
+<script>
+
+  // 获取页面数据
+  $.ajax({
+     type: "GET",
+     url: "/v6/web/mock/data",
+     success: function(data){
+        var order = data.data.order;
+        for(var i=0;i<order.length;i++){
+          // console.log(order[i]);
+          if(order[i] == 'head'){
+            $('.main').append(juicer(head,data.data.items));
+          }else if(order[i] == 'coupon'){
+            $('.main').append(juicer(coupon,data.data.items));
+          }else if(order[i] == 'goods'){
+            $('.main').append(juicer(goods,data.data.items));
+          }else if(order[i] == 'foot'){
+            $('.main').append(juicer(foot,data.data.items));
+          }
+        };
+      }
+    });
+
+  // 获取cookie值
+    sid = u.getCookie("_ujp_access_token");
+    console.log(sid);
+    function get_promotion_url(code) {
+        if (code) {
+            // url = 'http://api.ujipin.com/v4/promotions/'+code;
+            url = '/apis/v4/promotions/'+code;
+        }
+        return url
+    }
+    function promotion(code) {
+        if(!sid){
+            alert('您未登录,登录后才能领券');
+            var this_url = window.location.href;
+            window.location.href = "http://www.ujipin.com/user/login?callback="+this_url;//记得改回来
+        } else {
+
+            $.ajax({
+                url: get_promotion_url(code),
+                type: "post",
+                dataType: "json",
+                headers: {"Authorization": "Bearer " +sid},
+                success: function(data) {
+                  console.log(data);
+                    if (data.status_code == 200) {
+                        alert("优惠券已全部放入您的账户中！");
+                    } else if (data.status_code == 2402) {
+                        alert("尊敬的用户，您已参加过本次活动！")
+                    }
+                }
+            });
+        }
+    }
+
+    // 领券
+    $(".main").on('click','.codeBtn',function () {
+        var this_code = $(this).children('img').attr('code');
+        //console.log(this_code);
+        promotion(this_code);
+    });
+
+
+
+</script>
+
+{{/section}}

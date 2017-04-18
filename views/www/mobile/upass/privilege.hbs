@@ -1,0 +1,27 @@
+{{#section 'css-file'}}
+<style>
+.wrapper{ width: 100%;height:auto;}
+.topBanner{ width: 7.5rem;height:auto;}
+.topBanner img{ width: 100%;height:auto;}
+.bottomBanner{ width: 7.5rem;height:auto;}
+.bottomBanner img{ width: 100%;height:auto;}
+</style>
+{{/section}}
+<div class="wrapper">
+    <div class="topBanner">
+        <img src="http://ujipinwww.ufile.ucloud.com.cn/upass-privilege1-v2.png" alt="">
+    </div>
+    <div class="bottomBanner">
+        <img src="http://ujipinwww.ufile.ucloud.com.cn/upass-privilege2-v2.png" alt="">
+    </div>
+</div>
+{{#section 'js-file'}}
+<script src="/public/js/lib/ujipin.js"></script>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript">
+</script><script src="/public/js/lib/mobile/weixinShare.js" type="text/javascript"></script>
+<script type="text/javascript">
+//分享代码
+var path = window.location.host+window.location.pathname;
+shareAjax(11,path);
+</script>
+{{/section}}

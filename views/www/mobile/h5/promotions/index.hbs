@@ -1,0 +1,36 @@
+{{#section 'css-file'}}
+    <link rel="stylesheet" href="/public/css/web/special/pc.css">
+{{/section}}
+<!-- html部分 -->
+<div class="wrapper">
+
+</div>
+
+{{#section 'js-file'}}
+    <script src="/public/js/lib/juicer-min.js" type="text/javascript"></script>
+    <script src="/public/js/mobile/theme-templet.js" type="text/javascript"></script>
+    <script>
+        $.ajax({
+            type: "GET",
+            url: "/v6/mock/promotion/data",
+            success: function(data){
+                var arr = [];
+                var order = data.data.order;
+                // console.log(order);
+                for(var i=0;i<order.length;i++){
+                    console.log(order[i]);
+                    if(order[i] == 'head'){
+                        $('.wrapper').append(juicer(head,data.data.items));
+                    }else if(order[i] == 'coupon'){
+                        $('.wrapper').append(juicer(coupon,data.data.items));
+                    }else if(order[i] == 'goods'){
+                        $('.wrapper').append(juicer(goods,data.data.items));
+                    }else if(order[i] == 'foot'){
+                        $('.wrapper').append(juicer(foot,data.data.items));
+                    }
+                };
+            }
+        });
+    </script>
+
+{{/section}}

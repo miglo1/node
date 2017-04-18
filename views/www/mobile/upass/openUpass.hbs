@@ -1,0 +1,129 @@
+{{#section 'css-file'}}
+    <link rel="stylesheet" href="/public/css/lib/mobile/swiper.min.css"  type="text/css">
+    <link rel="stylesheet" href="/public/css/mobile/upass/openPass.css" type="text/css">
+{{/section}}
+<div class="wrapper">
+    <div class="content">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {{#each data.splash_list }}
+                    <div class="swiper-slide"><img src="{{ . }}" alt=""></div>
+                {{/each}}
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <footer>
+        <p class="p1">
+            <span>{{ data.title.prefix }}</span>
+            <s class="postfix"> {{ data.title.postfix }}</s>
+            <s class="old">{{ data.title.old }}</s>
+            <span class="postfix now">{{ data.title.postfix }}</span>
+            <span class="current now">{{ data.title.current }}</span>
+        </p>
+        <p class="p2">
+            <span>开通即视为同意</span>
+            <a href="http://m.ujipin.com/v4/upass/agreement">《U-PASS开通协议》</a>
+        </p>
+        <a class="open_btn" href="javascript:void(0);">立即开通</a>
+    </footer>
+</div>
+{{#section 'js-file'}}
+
+    <script src="/public/js/lib/mobile/swiper.min.js" type="text/javascript"></script>
+    <script src="/public/js/lib/ujipin.js"></script>
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
+    <script src="/public/js/lib/mobile/weixinShare.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            var access_token = u.getUrlString('access_token');
+            var sid =  access_token || u.getCookie("sid");
+            access_token && u.setCookie('sid',sid);
+            this.sid= u.getCookie("sid");
+            //banner轮播
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationClickable: true,
+                lazyLoading : true,
+                autoplay: 5000,
+                loop: true,
+                autoplayDisableOnInteraction: false,
+                effect: 'cube',
+                cube: {
+                    shadow: false
+                }
+            });
+            //点击立即开通
+            $('.open_btn').click(function () {
+                if(u.isApp() == "ios" || u.isApp() == "android" ){
+                    if(sid){
+                        window.location.href = "ujipin://upassPay";
+                    }else{
+                        window.location.href = "ujipin://login";
+                    }
+                }else{
+                    if(sid){
+                        window.location.href = "http://m.ujipin.com/v4/app/download";
+                    }else{
+                        window.location.href = "/v4/login_cover?callback="+window.location.href+"";
+                    }
+                }
+            });
+            //分享代码
+            configWX();
+            //调用微信接口
+            function configWX(){
+                $.ajax({
+                    type: "GET",
+                    url: "/api/v4/weixin/config?url=" + encodeURIComponent(window.location.href.split('#')[0]),
+                    dataType: "json",
+                    success: function(data) {
+                        if (data.status_code == '200') {
+                            wx.config({
+                                debug: false,
+                                appId: data.data.appId,
+                                timestamp: data.data.timestamp,
+                                nonceStr: data.data.nonceStr,
+                                signature: data.data.signature,
+                                jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage']
+                            });
+                            // share("http://" + window.location.host + '/v4/game/smell');
+                        }
+                    }});
+            }
+            wx.ready(function(){
+                var link = window.location.href;
+                wx.onMenuShareTimeline({
+                    //朋友圈
+                    title: '优集品',
+                    link: link,
+                    imgUrl: 'http://ujipinwww.ufile.ucloud.com.cn/upass-share-icon.png',
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+
+                wx.onMenuShareAppMessage({
+                    //给朋友
+                    title: '优集品',
+                    desc: '优集品，买手精选家居好物，编辑分享生活攻略',
+                    link: link,
+                    imgUrl: 'http://ujipinwww.ufile.ucloud.com.cn/upass-share-icon.png',
+                    type: '',
+                    dataUrl: '',
+                    success: function () {
+                        // 用户确认分享后执行的回调函数
+                    },
+                    cancel: function () {
+                        // 用户取消分享后执行的回调函数
+                    }
+                });
+
+            });
+        });
+    </script>
+{{/section}}

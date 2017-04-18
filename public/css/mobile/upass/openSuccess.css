@@ -1,0 +1,34 @@
+body,html{
+  width: 100%;
+  height: 100%;
+}
+.wrapper{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: url(http://ujipinwww.ufile.ucloud.com.cn/uOpensuccess.png) no-repeat;
+  background-size: 100% 100%;
+}
+p{
+  line-height: .48rem;
+  font-size: .24rem;
+  text-align: center;
+  color: #4A4A4A;
+  position: absolute;
+  width: 100%;
+  top: 20%;
+}
+a{
+  font-size: .26rem;
+  position: absolute;
+  width: 5.5rem;
+  height: .88rem;
+  line-height: .88rem;
+  background: #383635;
+  text-align: center;
+  border-radius: .44rem;
+  color: #FFFFFF;
+  left: 50%;
+  margin-left: -2.75rem;
+  bottom:1.3rem;
+}

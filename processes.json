@@ -1,0 +1,24 @@
+[
+  {
+    "name"        : "ujipin-app",
+    "max_memory_restart": "1024M",
+    "script"      : "app.js",
+    "cwd"         : "./",
+    "watch"       : [
+      "routers",
+      "views"
+    ],
+    "ignore_watch":[
+      "node_modules",
+      "logs",
+      "public"
+    ],
+    "instances"   : "max",
+    "exec_mode"   : "cluster",
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "out_file": "./logs/app.log",
+    "error_file": "./logs/err.log"
+  }
+]

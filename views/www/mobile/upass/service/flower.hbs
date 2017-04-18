@@ -1,0 +1,33 @@
+{{#section 'css-file'}}
+<style>
+.wrapper{
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    position: relative;
+}
+.wrapper img{
+    width: 100%;
+    height:auto;
+    float: left;
+}
+</style>
+{{/section}}
+
+<div class="wrapper">
+  <img src="http://ujipinwww.ufile.ucloud.com.cn/fllow1_v2.jpg" alt="">
+  <img src="http://ujipinwww.ufile.ucloud.com.cn/fllower2_v1.jpg" alt="">
+  <img src="http://ujipinwww.ufile.ucloud.com.cn/fllow3.jpg" alt="">
+  <img src="http://ujipinwww.ufile.ucloud.com.cn/fllower4_v3.jpg" alt="">
+  <img src="http://ujipinwww.ufile.ucloud.com.cn/fllow5_v2.jpg" alt="">
+</div>
+{{#section 'js-file'}}
+<script src="/public/lib/js/ujipin.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js" type="text/javascript"></script>
+<script src="/public/lib/js/mobile/weixinShare.js" type="text/javascript"></script>
+<script>
+//分享代码
+var path = window.location.host+window.location.pathname;
+shareAjax(11,path);
+</script>
+{{/section}}

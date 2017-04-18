@@ -1,0 +1,269 @@
+
+strong, b {
+    font-weight: inherit;
+}
+.main{
+    width: 1150px;
+    height:auto;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+}
+/*头图部分*/
+.topModel{
+    width:1150px;
+    height:auto;
+    overflow: hidden;
+}
+.topModel img{
+    width:1150px;
+    height:auto;
+    float: left;
+}
+/*领券部分*/
+.codeModel{
+    width:1150px;
+    height:auto;
+    overflow: hidden;
+}
+.codeModel img{
+    width:1150px;
+    height:auto;
+    float: left;
+}
+/*title部分*/
+.titleModel{
+    width: 1150px;
+    height:auto;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.titleModel img{
+    width:1150px;
+    height:auto;
+    float: left;
+}
+.clickModel,.clickModel_item{
+    width:1150px;
+    height:auto;
+    overflow: hidden;
+}
+.clickModel_item a{
+    width: 575px;
+    height:auto;
+    float: left;
+}
+.clickModel_item a img{
+    float: left;
+    width: 575px;
+    height:auto;
+}
+.modelBottom{
+    width:1150px;
+    height:auto;
+    overflow: hidden;
+}
+.modelBottom img{
+    width:1150px;
+    height:auto;
+    float: left;
+}
+/*商品列表样式*/
+.modelGoods{
+    min-width: 1150px;
+    margin:0 auto;
+    height:auto;
+    border-top: 1px solid #f3f3f3;
+    background: #fff;
+}
+.goodsBox{
+    width:920px;
+    height:auto;
+    margin: 30px auto 0;
+    overflow: hidden;
+    padding: 40px 0 40px 0;
+}
+.goodsList{
+    width: 920px;
+    height:auto;
+    overflow: hidden;
+}
+.goodsList li{
+    width: 221px;
+    height: 313px;
+    float: left;
+    margin: 0 8px 16px 0;
+    overflow: hidden;
+    background: #fbfbfb;
+    position: relative;
+}
+.leftLogo{
+    position: absolute;
+    width: 52px;
+    height:52px;
+    border-radius: 50%;
+    background: #ccc;
+    color: #fff;
+    top:10px;
+    left: 6px;
+    text-align: center;
+    line-height: 52px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.item img{
+    width: 221px;
+    height: 221px;
+    display: block;
+    border-radius: 6px;
+    background: #fff;
+}
+.descript{
+    width: 221px;
+    height: 100px;
+    padding-top: 4px;
+}
+.descript a{
+    width: 100%;
+    height:100%;
+    display: block;
+    color: #b9b9b9;
+    font-weight: initial;
+    font-family: "Gotham Book";
+}
+.descript h3{
+    width: 100%;
+    height: 26px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 26px;
+    display: block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.descript p{
+    width: 221px;
+    height: 34px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 14px;
+    display: block;
+    overflow:hidden;
+    word-break:break-all;
+    word-wrap:break-word ;
+}
+.prise{
+    width: 221px;
+    height: 22px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.prise strong{
+    width:106px;
+    height: 20px;
+    display: block;
+    color: #fe8385;
+    font-size: 18px;
+    /*font-weight: bold;*/
+    text-align: center;
+    float: left;
+}
+.prise strong span{
+    font-size: 14px;
+}
+.prise em{
+    width:100px;
+    height: 14px;
+    line-height: 14px;
+    display: block;
+    text-decoration: line-through;
+    text-align: center;
+    float: left;
+    font-size: 12px;
+    margin-top: 4px;
+    color: #cfcfcf;
+}
+/*右侧侧边栏*/
+.rightBox{
+    width: 130px;
+    height: 210px;
+    position: fixed;
+    top: 190px;
+    right: 20px;
+    background: #f1f1f1;
+}
+.rightBox li{
+    width: 108px;
+    height: 30px;
+    position: absolute;
+    left: 10px;
+    text-align: center;
+    line-height: 30px;
+    overflow: hidden;
+    border-bottom:1px solid #d6d6d6;
+}
+.rightBox .liEnd{
+    border-bottom:none;
+}
+.rightBox a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #6b6b6b;
+    font-size: 20px;
+    text-decoration: inherit;
+}
+.rightBox a:hover{
+    color: #565656;
+}
+.rt_One{
+    top: 10px;
+}
+.rt_Two{
+    top: 50px;
+}
+.rt_Three{
+    top: 92px;
+}
+.rt_Four{
+    top: 134px;
+}
+.rt_end{
+    top: 174px;
+}
+.rt_weight{
+    font-weight: bold;
+}
+/*茅点的样式*/
+#topBox{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    display: block;
+}
+#topOne{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    display: block;
+}
+#topTwo{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    display: block;
+}
+#topThree{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    display: block;
+}
+#topFour{
+    position: absolute;
+    height: 10px;
+    width: 100%;
+    display: block;
+}

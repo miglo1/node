@@ -1,0 +1,107 @@
+.wrapper{
+    width: 7.5rem;
+    background: url("http://ujipinwww.ufile.ucloud.com.cn/m-sq-upassOpen-bg-v2.png") no-repeat;
+    background-size: 7.5rem auto;
+}
+.content{
+    width: 7.5rem;
+    height:auto;
+    margin: 4rem auto 0;
+
+}
+.swiper-container {
+    width: 6rem;
+    height:auto;
+}
+.swiper-slide{
+    text-align: center;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-pagination{
+    width: 100%;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet{
+    width: .12rem;
+    height: .12rem;
+    background: none;
+    margin-left: 0.1rem;
+    border: 1px solid #BEBDBB;
+}
+.swiper-pagination-bullet-active{
+    background: #BEBDBB !important;
+}
+
+footer{
+    width: 7.5rem;
+    height:1.14rem;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    z-index: 1000;
+    border-top: 1px solid #BEBDBB;
+}
+.p1{
+    height:0.28rem;
+    width: auto;
+    position: absolute;
+    top:0.2rem;
+    left: 0.4rem;
+    color: rgb(79,73,75);
+    font-size: 0.28rem;
+}
+.p1 s{
+    color: #BEBDBB;
+}
+.p1 .postfix{
+    margin-left: -3px;
+    vertical-align: bottom;
+}
+.p1 s.old{
+    margin-left: -5px;
+}
+.p1 .now{
+    color: #B93A3E;
+}
+.p1 .current{
+    margin-left: -7px;
+}
+
+.p2{
+    height:0.28rem;
+    width: auto;
+    position: absolute;
+    top:0.6rem;
+    left: 0.4rem;
+    font-size: 0.2rem;
+    line-height: 0.28rem;
+}
+.p2 a{
+    color: rgb(231,76,60);
+    font-size: .2rem;
+}
+.open_btn{
+    width: 2.24rem;
+    height:0.72rem;
+    background: #363534;
+    color: #fff;
+    text-align: center;
+    line-height: 0.72rem;
+    position: absolute;
+    top:0.2rem;
+    right:0.4rem;
+    border-radius: 0.06rem;
+    font-size: 0.24rem;
+}

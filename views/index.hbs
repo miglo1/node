@@ -1,0 +1,15 @@
+{{#section 'css-file'}}
+    <link rel="stylesheet" type="text/css" href="/public/lib/css/h5/reset.css">
+{{/section}}
+
+<h1>Test Page</h1>
+<p>We're testing some jQuery stuff.</p>
+
+{{#section 'js-file'}}
+    <script>
+        $('document').ready(function(){
+            $('h1').html('jQuery Works');
+        });
+    </script>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+{{/section}}
